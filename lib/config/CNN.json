@@ -1,0 +1,47 @@
+{
+    "dataset": {
+        "drug_encoding": "DGL_GCN", 
+        "protein_encoding": "CNN", 
+        "tier1_task": "single_pred", 
+        "tier2_task": "Transposition", 
+        "dataset_name": "uniprot_9606_2023_10_12_unique",
+        "path": "./data",
+        "split":{
+            "method": "random",
+            "by_class": true,
+            "frac": [0, 0, 1]
+    }
+    },
+    "backbone": {
+        "freeze": false,
+        "deeppurpose": {
+            "max_len_protein": 1024
+        }
+    },
+    "head": {
+        "type": "MLP",  
+        "hidden_dims_lst": [256, 128, 64],
+        "bias": true
+    },
+    "baseline": "Default_cls",
+    "train": {
+	"batch_size": 512,
+	"max_epoch": 100
+    },
+    "test": {
+        "batch_size": 5120,
+        "exp_id": "CNN",
+        "save_format": "pkl"
+    },
+    "setting": {
+        "type": "LT Classification" 
+    },
+    "export": true,
+    "use_gpu": true,
+    "gpu_id": 0,
+    "save_step": 5,
+    "show_step": 5,
+    "valid_step": 1,
+    "output_dir": "./output",
+    "seed": 3
+}

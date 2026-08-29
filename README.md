@@ -11,7 +11,7 @@ Conda environment can be installed from environment.yml.
 
 # Model inference on human proteome data
 
-The model 1 presented in the paper is a relatively older version originally used for initial coarse screening, since then we have iterated many versions. We are providing a latest version which should predict 1333 positive samples with AA length &le; 512 from our human proteome dataset. The following two-stage screening pipeline should still identify all the 15 sequences used for experimental validation in our paper.
+The model 1 presented in the paper is a relatively older version originally used for initial coarse screening, since then we have iterated many versions. We are providing a latest version which should predict 1567 positive samples with AA length &le; 1024 from our human proteome dataset. The following two-stage screening pipeline identify 554 positive samples including all 15 sequences used for experimental validation in our paper.
 
 ## Model 1 screening
 ```bash
